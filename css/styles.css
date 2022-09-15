@@ -106,6 +106,10 @@ ul {
     margin-left: 50px;
 }
 
+.nav-anch {
+    position: relative;
+}
+
 .nav-site-link {
     display: block;
     padding-top: 31px;
@@ -116,6 +120,33 @@ ul {
     line-height: 1.15;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: inline-block;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--primary-blue-color);
+    border-radius: 2px;
+
+    opacity: 0;
+}
+
+.nav-site-link.current::after {
+    opacity: 1;
+}
+
+.current {
+    color: var(--primary-blue-color);
 }
 
 .nav-site-link:hover,
@@ -147,6 +178,8 @@ ul {
     line-height: 1.15;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact {
@@ -175,7 +208,7 @@ ul {
     background-color: #c4c4c4;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url('../images/Img-hero.jpg');
+        url('../images/hero/Img-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -197,7 +230,7 @@ ul {
 }
 
 .hero-btn {
-    background: var(--primary-blue-color);
+    background-color: var(--primary-blue-color);
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
@@ -207,6 +240,10 @@ ul {
     border: none;
     cursor: pointer;
     padding: 10px 32px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -280,10 +317,36 @@ ul {
     font-size: 36px;
     line-height: 1.166;
     letter-spacing: 0.03em;
+
     color: var(--primary-black-color);
 
     text-align: center;
     margin-bottom: 50px;
+}
+
+.about-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+
+    color: var(--primary-white-color);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.about-img {
+    position: relative;
 }
 
 /*Team*/
@@ -366,6 +429,9 @@ ul {
     fill: currentColor;
 
     border-radius: 50%;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team {
@@ -414,6 +480,11 @@ ul {
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-logo {
@@ -523,6 +594,8 @@ ul {
     fill: currentColor;
 
     border-radius: 50%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link-footer {
@@ -566,6 +639,14 @@ ul {
     cursor: pointer;
 
     padding: 6px 25px;
+
+    box-shadow: none;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -594,16 +675,69 @@ ul {
     margin-bottom: 0;
 }
 
-/*.samples-list .item:nth-child(3n) {
-    margin-right: 0;
-}
-*/
-
 .link-decor {
+    position: relative;
+
     display: block;
     background-color: var(--primary-white-color);
     border: 1px solid #EEEEEE;
     text-decoration: none;
+
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-decor:hover .link-hover-text,
+.link-decor:focus .link-hover-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.link-decor:hover .img-wrap::before,
+.link-decor:focus .img-wrap::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrap::before {
+    position: absolute;
+
+    display: inline-block;
+
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--primary-white-color);
+
+    transform: translateY(100%);
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-list-title {
@@ -639,4 +773,67 @@ ul {
     background-color: var(--primary-white-color);
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* modal window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 14px;
+
+    width: 520px;
+    height: 580px;
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transform: translate(top-8px, right-8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    cursor: pointer;
+
+    background-color: var(--primary-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
