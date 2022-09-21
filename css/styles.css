@@ -509,6 +509,11 @@ ul {
     align-items: baseline;
 }
 
+.sup-address
+{
+    flex-grow: 1;
+}
+
 .footer-logo {
     display: flex;
     margin-bottom: 20px;
@@ -644,7 +649,6 @@ ul {
 
     width: 358px;
     height: 50px;
-    margin-right: 12px;
 
     padding: 15px 16px;
 
@@ -695,13 +699,13 @@ ul {
 .icon-link-footer-email
 {
     fill: var(--primary-white-color);
+    margin-left: 12px;
 }
 
 .footer-email-label
 {
-    margin-right: 12px;
     display: flex;
-    
+    margin-right: 12px;   
 }
 
 /*PORTFOLIO*/
@@ -899,7 +903,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 14px;
+    padding: 40px;
 
     width: 520px;
     height: 580px;
@@ -935,7 +939,7 @@ ul {
 
 .modal-btn:hover,
 .modal-btn:focus {
-    color: var(--primary-blue-color);
+    fill: var(--primary-blue-color);
 }
 
 .modal-title {
@@ -945,7 +949,6 @@ ul {
 
     text-align: center;
     margin-bottom: 12px;
-    margin-top: 40px;
 
     color: var(--primary-black-color);
 }
@@ -1050,7 +1053,7 @@ ul {
 
 .form-icon {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 12px;
 
     cursor: pointer;
