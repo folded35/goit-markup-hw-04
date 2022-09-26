@@ -8,6 +8,7 @@
 @import './base/base';
 @import './base/reset';
 @import './base/container';
+@import './base/backdrop';
 
 
 // layout styles
@@ -22,6 +23,8 @@
 @import './layouts/join';
 @import './layouts/subscription';
 @import './layouts/portfolio';
+@import './layouts/modal';
+@import './layouts/form';
 
 // components styles
 @import './components/logo';

@@ -442,65 +442,65 @@
     <!-- modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn" data-modal-close>
+        <button class="modal__btn" data-modal-close>
           <svg widht="11" height="11">
             <use href="./images/icomoon/icons.svg#icon-close-btn"></use>
           </svg>
         </button>
 
-        <h3 class="modal-title"> Залиште свої дані, ми вам передзвонимо </h3>
+        <h3 class="modal__title"> Залиште свої дані, ми вам передзвонимо </h3>
 
-        <form class="modal-form">
-          <label class="form-field">
-            <span class="form-text">Ім'я</span>
-            <input type="text" name="name" class="form-input" />
-            <svg width="12" height="12" class="form-icon">
+        <form class="form">
+          <label class="form__field">
+            <span class="form__text">Ім'я</span>
+            <input type="text" name="name" class="form__input" />
+            <svg width="12" height="12" class="form__icon">
               <use href="./images/icomoon/icons.svg#icon-person"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-text">Телефон</span>
-            <input type="tel" name="tel" class="form-input" />
-            <svg width="12" height="12" class="form-icon">
+          <label class="form__field">
+            <span class="form__text">Телефон</span>
+            <input type="tel" name="tel" class="form__input" />
+            <svg width="12" height="12" class="form__icon">
               <use href="./images/icomoon/icons.svg#icon-telefon"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-text">Пошта</span>
-            <input type="email" name="mail" class="form-input" />
-            <svg width="12" height="12" class="form-icon">
+          <label class="form__field">
+            <span class="form__text">Пошта</span>
+            <input type="email" name="mail" class="form__input" />
+            <svg width="12" height="12" class="form__icon">
               <use href="./images/icomoon/icons.svg#icon-email"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-text">Коментар</span>
+          <label class="form__field">
+            <span class="form__text">Коментар</span>
             <textarea
               name="comment"
               rows="6"
-              class="form-input placeholder-comment"
+              class="form__input form__placeholder"
               placeholder="Введіть текст"
             ></textarea>
           </label>
 
-          <label class="form-field-checkbox">
+          <label class="form__field--checkbox">
             <input
               type="checkbox"
               name="terms-of-use"
               value="terms-of-use"
-              class="form-input-checkbox"
+              class="form__input--checkbox"
             />
-            <span class="checkbox-icon"></span>
-            <span class="form-label-checkbox">
+            <span class="form__checkbox--icon"></span>
+            <span class="form__label--checkbox">
               Погоджуюся з розсилкою та приймаю
-              <a href="#" class="form-label-link">Умови договору</a>
+              <a href="#" class="form__label--link">Умови договору</a>
             </span>
           </label>
 
-          <div class="modal-btn-supp">
-            <button type="submit" class="modal-btn-send">Відправити</button>
+          <div class="modal__btn--supp">
+            <button type="submit" class="modal__btn--send">Відправити</button>
           </div>
         </form>
       </div>
