@@ -1,93 +1,57 @@
-.team {
+.section__other--bg {
     background-color: #F5F4FA;
+}
 
-    &__title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.165;
-        letter-spacing: 0.03em;
-        color: var(--primary-black-color);
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.165;
+    letter-spacing: 0.03em;
+    color: var(--primary-black-color);
 
-        text-align: center;
-        margin-bottom: 50px;
-    }
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-    &__list {
-        display: flex;
-        padding: 0;
+.team {
+    display: flex;
+    padding: 0;
 
-        list-style: none;
-    }
+    list-style: none;
+}
 
-    &__card {
-        background-color: var(--primary-white-color);
+.team__item {
+    background-color: var(--primary-white-color);
 
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
-    }
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 
-    &__list &__card+&__card {
-        margin-left: 30px;
-    }
+.team .team__item+.team__item {
+    margin-left: 30px;
+}
 
-    &__info {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+.team__info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
-    &__name {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.1875;
-        letter-spacing: 0.03em;
-        color: var(--primary-black-color);
+.team__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.03em;
+    color: var(--primary-black-color);
 
-        text-align: center;
-        margin-bottom: 10px;
-    }
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-    &__prof {
-        text-align: center;
-        margin-bottom: 16px;
+.team__text {
+    text-align: center;
+    margin-bottom: 16px;
 
-        font-size: 16px;
-        line-height: 1.1875;
-        letter-spacing: 0.03em;
-    }
-
-    &__links {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-    }
-
-    &__link+&__link {
-        margin-left: 10px;
-    }
-
-    &__social--network {
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        color: var(--primary-icon-color);
-        fill: currentColor;
-
-        border-radius: 50%;
-
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &__social--network:hover,
-    &__social--network:focus {
-        background-color: var(--primary-blue-color);
-        color: var(--primary-white-color);
-    }
-
-    &__icon {
-        fill: currentColor;
-    }
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.03em;
 }

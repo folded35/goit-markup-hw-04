@@ -1,8 +1,10 @@
 // utils styles
-@import './utils/variables.scss';
+@import './utils/variables';
 @import './utils/visually-hidden';
-@import './utils/current';
-
+@import './utils/currents';
+@import './utils/contacts';
+@import './utils/customers';
+@import './utils/social';
 
 // base styles
 @import './base/base';
@@ -18,7 +20,6 @@
 @import './layouts/about';
 @import './layouts/operation';
 @import './layouts/team';
-@import './layouts/customers';
 @import './layouts/footer';
 @import './layouts/join';
 @import './layouts/subscription';

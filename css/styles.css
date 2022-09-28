@@ -70,7 +70,7 @@ ul {
     border-bottom: 1px solid #ECECEC;
 }
 
-.header-container {
+.header__container {
     display: flex;
     align-items: center;
 } */
@@ -132,7 +132,7 @@ ul {
     color: var(--primary-blue-color);
 }
 
-.nav__link.current::after {
+.nav__link.nav__link--current::after {
     opacity: 1;
 }
 
@@ -174,11 +174,11 @@ ul {
     fill: currentColor;
 } */
 
-/* .current {
+/* .nav__link--current {
     color: var(--primary-blue-color);
-} */
+}
 
-/* .current::after {
+.nav__link--current::after {
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -218,7 +218,7 @@ ul {
 
 }
 
-.hero__text {
+.hero__title {
     width: 696px;
     margin-left: auto;
     margin-right: auto;
